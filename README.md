@@ -9,6 +9,6 @@
 
 
 # 参考文献
-[チュートリアル](https://plantuml.com/ja/)
-[ユースケース図](https://plantuml.com/ja/use-case-diagram)
-[シーケンス図](https://plantuml.com/ja/sequence-diagram)
+1. [チュートリアル](https://plantuml.com/ja/)
+1. [ユースケース図](https://plantuml.com/ja/use-case-diagram)
+1. [シーケンス図](https://plantuml.com/ja/sequence-diagram)
