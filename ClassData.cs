@@ -33,6 +33,11 @@ public class ClassData{
         return StudentList[n];
     }
 
+    //Listのデータ数を返す
+    public int getListSize(){
+        return StudentList.Count;
+    }
+
     /*
     //生徒の出席番号を返す
     public string getStudentNum(int n){
