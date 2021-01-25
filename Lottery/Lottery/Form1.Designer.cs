@@ -30,69 +30,67 @@ namespace Lottery
         private void InitializeComponent()
         {
             this.GatyaButton = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.Birthday = new System.Windows.Forms.CheckBox();
+            this.Nomal = new System.Windows.Forms.CheckBox();
+            this.result = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // GatyaButton
             // 
             this.GatyaButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
-            this.GatyaButton.Location = new System.Drawing.Point(182, 263);
+            this.GatyaButton.Location = new System.Drawing.Point(454, 307);
             this.GatyaButton.Name = "GatyaButton";
-            this.GatyaButton.Size = new System.Drawing.Size(380, 55);
+            this.GatyaButton.Size = new System.Drawing.Size(334, 77);
             this.GatyaButton.TabIndex = 0;
             this.GatyaButton.Text = "抽選スタート！！！";
             this.GatyaButton.UseVisualStyleBackColor = true;
-            this.GatyaButton.Click += new System.EventHandler(this.GatyaButton);
+            this.GatyaButton.Click += new System.EventHandler(this.GatyaButtonClicked);
             // 
-            // checkBox1
+            // Birthday
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.checkBox1.Location = new System.Drawing.Point(28, 304);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(114, 35);
-            this.checkBox1.TabIndex = 1;
-            this.checkBox1.Text = "誕生日";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.Birthday.AutoSize = true;
+            this.Birthday.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.Birthday.Location = new System.Drawing.Point(314, 349);
+            this.Birthday.Name = "Birthday";
+            this.Birthday.Size = new System.Drawing.Size(114, 35);
+            this.Birthday.TabIndex = 1;
+            this.Birthday.Text = "誕生日";
+            this.Birthday.UseVisualStyleBackColor = true;
+            this.Birthday.CheckedChanged += new System.EventHandler(this.BirthdayChecked);
             // 
-            // checkBox2
+            // Nomal
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.checkBox2.Location = new System.Drawing.Point(28, 263);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(87, 35);
-            this.checkBox2.TabIndex = 2;
-            this.checkBox2.Text = "通常";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
+            this.Nomal.AutoSize = true;
+            this.Nomal.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.Nomal.Location = new System.Drawing.Point(314, 308);
+            this.Nomal.Name = "Nomal";
+            this.Nomal.Size = new System.Drawing.Size(87, 35);
+            this.Nomal.TabIndex = 2;
+            this.Nomal.Text = "通常";
+            this.Nomal.UseVisualStyleBackColor = true;
+            this.Nomal.CheckedChanged += new System.EventHandler(this.NomalChecked);
             // 
-            // label1
+            // result
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F);
-            this.label1.Location = new System.Drawing.Point(65, 89);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(301, 76);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "抽選結果";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.result.AutoSize = true;
+            this.result.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F);
+            this.result.Location = new System.Drawing.Point(208, 116);
+            this.result.Name = "result";
+            this.result.Size = new System.Drawing.Size(301, 76);
+            this.result.TabIndex = 3;
+            this.result.Text = "抽選結果";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(581, 352);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox1);
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.result);
+            this.Controls.Add(this.Nomal);
+            this.Controls.Add(this.Birthday);
             this.Controls.Add(this.GatyaButton);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -101,9 +99,9 @@ namespace Lottery
         #endregion
 
         private System.Windows.Forms.Button GatyaButton;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.CheckBox Birthday;
+        private System.Windows.Forms.CheckBox Nomal;
+        private System.Windows.Forms.Label result;
     }
 }
 
