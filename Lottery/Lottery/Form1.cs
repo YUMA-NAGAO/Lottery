@@ -27,13 +27,18 @@ namespace Lottery
 
         private void NomalChecked(object sender, EventArgs e)
         {
-            student_name = "川上雷";
+            student_name = "森田盛岡";
 
         }
 
         private void BirthdayChecked(object sender, EventArgs e)
         {
-            student_name = "森田盛岡";
+            student_name = "川上雷";
+
+        }
+
+        private void Nomal_CheckedChanged(object sender, EventArgs e)
+        {
 
         }
     }
