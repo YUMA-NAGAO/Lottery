@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public class test{
     public static void Main(String[] args){
         ClassData data = new ClassData("class.csv");
-        Console.WriteLine(data.getStudentData(1).getNum());
+        Console.WriteLine(data.getStudentData(1).getBirth());
         //Console.WriteLine(data.getStudentName(1));
     }
 }
@@ -22,13 +22,13 @@ public class ClassData{
         while(!file.EndOfStream){
             String line = file.ReadLine();
             String[] data = line.Split(separator,StringSplitOptions.RemoveEmptyEntries);
-            Student tmp = new Student(data[0], data[1], Int32.Parse(data[2]));
+            Student tmp = new Student(data[0], data[1], DateTime.ParseExact(data[2],"MM/dd",null));
             StudentList.Add(tmp);
         }
         file.Close();        
     }
 
-    //生徒のデータを返す
+    //指定位置の生徒のデータを返す
     public Student getStudentData(int n){
         return StudentList[n];
     }
@@ -36,6 +36,39 @@ public class ClassData{
     //Listのデータ数を返す
     public int getListSize(){
         return StudentList.Count;
+    }
+
+    //名前から生徒データを逆引き
+    public List<Student> SearchStudentName(string na){
+        List<Student> temp = new List<Student>();
+        foreach(Student s in StudentList){
+            if(string.Compare(na, s.getName()) == 0){
+                temp.Add(s);
+            }
+        }
+        return temp;
+    }
+
+    //誕生日から生徒データを逆引き
+    public List<Student> SearchStudentBirth(DateTime bt1, DateTime bt2){
+        List<Student> temp = new List<Student>();
+        foreach(Student s in StudentList){
+            if(bt1.Date <= s.getBirth().Date && s.getBirth().Date <= bt2.Date ){
+                temp.Add(s);
+            }
+        }
+        return temp;
+    }
+
+    //出席番号から生徒データを逆引き
+    public Student SearchStudentNum(string n){
+        foreach (Student s in StudentList)
+        {
+            if(string.Compare(n, s.getNum()) == 0){
+                return s;
+            }
+        }
+        return null;
     }
 
     /*
@@ -58,9 +91,9 @@ public class ClassData{
 
 public class Student{
     private string number,name;
-    private int birthday;
+    private DateTime birthday;
 
-    public Student(String n,String na,int birth){
+    public Student(String n,String na,DateTime birth){
         number = n;
         name = na;
         birthday = birth;
@@ -75,7 +108,7 @@ public class Student{
         return name;
     }
 
-    public int getBirth(){
+    public DateTime getBirth(){
         return birthday;
     }
 
