@@ -12,23 +12,28 @@ namespace Lottery
 {
     public partial class Form1 : Form
     {
+        private string student_name = "山田太郎";
+        private int student_number = 0;
         public Form1()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void GatyaButtonClicked(object sender, EventArgs e)
         {
+            
+            this.result.Text = student_name;
+        }
+
+        private void NomalChecked(object sender, EventArgs e)
+        {
+            student_name = "川上雷";
 
         }
 
-        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        private void BirthdayChecked(object sender, EventArgs e)
         {
-
-        }
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
+            student_name = "森田盛岡";
 
         }
     }

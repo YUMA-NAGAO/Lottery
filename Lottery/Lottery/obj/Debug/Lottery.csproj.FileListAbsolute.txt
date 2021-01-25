@@ -1,0 +1,10 @@
+\\Mac\Home\Downloads\GitHub\Lottery\Lottery\Lottery\bin\Debug\Lottery.exe.config
+\\Mac\Home\Downloads\GitHub\Lottery\Lottery\Lottery\bin\Debug\Lottery.exe
+\\Mac\Home\Downloads\GitHub\Lottery\Lottery\Lottery\bin\Debug\Lottery.pdb
+\\Mac\Home\Downloads\GitHub\Lottery\Lottery\Lottery\obj\Debug\Lottery.csprojAssemblyReference.cache
+\\Mac\Home\Downloads\GitHub\Lottery\Lottery\Lottery\obj\Debug\Lottery.Form1.resources
+\\Mac\Home\Downloads\GitHub\Lottery\Lottery\Lottery\obj\Debug\Lottery.Properties.Resources.resources
+\\Mac\Home\Downloads\GitHub\Lottery\Lottery\Lottery\obj\Debug\Lottery.csproj.GenerateResource.cache
+\\Mac\Home\Downloads\GitHub\Lottery\Lottery\Lottery\obj\Debug\Lottery.csproj.CoreCompileInputs.cache
+\\Mac\Home\Downloads\GitHub\Lottery\Lottery\Lottery\obj\Debug\Lottery.exe
+\\Mac\Home\Downloads\GitHub\Lottery\Lottery\Lottery\obj\Debug\Lottery.pdb
