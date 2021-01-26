@@ -59,7 +59,7 @@ namespace Lottery
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(203, 322);
+            this.radioButton1.Location = new System.Drawing.Point(221, 322);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(49, 17);
             this.radioButton1.TabIndex = 4;
@@ -71,7 +71,7 @@ namespace Lottery
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(203, 363);
+            this.radioButton2.Location = new System.Drawing.Point(221, 367);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(61, 17);
             this.radioButton2.TabIndex = 4;
