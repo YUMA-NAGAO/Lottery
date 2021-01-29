@@ -2,13 +2,13 @@ using System;
 using System.IO;
 using System.Collections.Generic;
 
-public class test{
-    public static void Main(String[] args){
-        ClassData data = new ClassData("class.csv");
-        Console.WriteLine(data.getStudentData(1).getBirth());
-        //Console.WriteLine(data.getStudentName(1));
-    }
-}
+//public class test{
+//    public static void Main(String[] args){
+//        ClassData data = new ClassData("class.csv");
+//        Console.WriteLine(data.getStudentData(1).getBirth());
+//        //Console.WriteLine(data.getStudentName(1));
+//    }
+//}
 
 public class ClassData{
     private List<Student> StudentList;
