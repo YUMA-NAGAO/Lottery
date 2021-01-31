@@ -6,23 +6,34 @@ namespace Lottery
 {
     public class CalcData
     {
-        int rvalue;
         ClassData cdata;
         Random r;
-        List<Student> sList;
+		List<Student> sList;
 
-        //コンストラクタ
-        public CalcData()
+		//コンストラクタ
+		public CalcData()
         {
             cdata = new ClassData("class.csv");
-            r = new System.Random();
-            sList = cdata.getStudentList();
-        }
+			sList = cdata.getStudentList();
+		}
 
+        // ランダムに生徒の名前を返す
         public string getRandStudentName()
-        {
+		{
+            r = new System.Random();
             return sList[r.Next(0, sList.Count)].getName();
-        }
+		}
+
+        // 生徒名のリストを返す
+		public List<string> getStudentNameList()
+		{
+			List<string> StudentNameList = new List<string>();
+			foreach (Student s in sList)
+			{
+                StudentNameList.Add(s.getName());
+            }
+			return StudentNameList;
+		}
 
         //名前から生徒データを逆引き
         protected List<Student> SearchStudentName(string na)

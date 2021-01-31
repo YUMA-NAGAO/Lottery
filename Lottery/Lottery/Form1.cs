@@ -13,11 +13,15 @@ namespace Lottery
     public partial class Form1 : Form
     {
         private string student_name;
-        private int student_number = 0;
-        public Form1()
+		// private int student_number = 0;
+		CalcData calc_data;
+		List<string> StudentNameList;
+		public Form1()
         {
-            InitializeComponent();
-        }
+			InitializeComponent();
+            calc_data = new CalcData();
+			StudentNameList = calc_data.getStudentNameList();
+		}
 
         private void GatyaButtonClicked(object sender, EventArgs e)
         {
@@ -25,9 +29,8 @@ namespace Lottery
         }
 
         private void NomalChecked(object sender, EventArgs e)
-        {
-			CalcData cldata = new CalcData();
-			student_name = cldata.getRandStudentName();
+		{
+			student_name = calc_data.getRandStudentName();
 
 		}
 
