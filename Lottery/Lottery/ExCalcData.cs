@@ -24,26 +24,21 @@ namespace Lottery
             return days;
         }
 
-        public List<string> getBirthStudentName(int selected_index)
+        public string getBirthStudentName(int selected_index)
         {
-            List<string> BirthStudentNameList = new List<string>();
             List<DateTime> days = getMonthStartEnd(selected_index);
             sList = SearchStudentBirth(days[0], days[1]);
 
             if (sList.Count > 0)
             {
-                foreach (Student s in sList)
-                {
-                    BirthStudentNameList.Add(s.getName());
-                }
+                return getRandStudentName();
             }
             else
             {
-                BirthStudentNameList.Add("誕生日の人がいませんでした。月をかえてください。");
+                return "誕生日の人がいませんでした。対象月をかえてください。";
             }
 
             
-            return BirthStudentNameList;
         }
 
     }

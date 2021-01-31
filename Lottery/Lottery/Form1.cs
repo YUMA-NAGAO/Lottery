@@ -14,7 +14,7 @@ namespace Lottery
     {
         private string student_name;
 
-		CalcData calc_data;
+		ExCalcData calc_data;
 		List<string> StudentNameList;
         Random rnd = new Random();
         int RandomTime = 200;
