@@ -21,12 +21,11 @@ namespace Lottery
 
         public string getRandStudentName()
         {
-            return cdata.getStudentData(r.Next(0, cdata.getListSize())).getName();
+            return sList[r.Next(0, sList.Count)].getName();
         }
 
-
         //名前から生徒データを逆引き
-        public List<Student> SearchStudentName(string na)
+        protected List<Student> SearchStudentName(string na)
         {
             List<Student> temp = new List<Student>();
             foreach (Student s in sList)
@@ -40,7 +39,7 @@ namespace Lottery
         }
 
         //誕生日から生徒データを逆引き
-        public List<Student> SearchStudentBirth(DateTime bt1, DateTime bt2)
+        protected List<Student> SearchStudentBirth(DateTime bt1, DateTime bt2)
         {
             List<Student> temp = new List<Student>();
             foreach (Student s in sList)
@@ -54,7 +53,7 @@ namespace Lottery
         }
 
         //出席番号から生徒データを逆引き
-        public Student SearchStudentNum(string n)
+        protected Student SearchStudentNum(string n)
         {
             foreach (Student s in sList)
             {
