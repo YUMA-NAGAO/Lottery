@@ -31,10 +31,13 @@ namespace Lottery
 
             if (sList.Count > 0)
             {
-                return getRandStudentName();
+                string return_name = getRandStudentName();
+                sList = cdata.getStudentList();
+                return return_name;
             }
             else
             {
+                sList = cdata.getStudentList();
                 return "誕生日の人がいませんでした。対象月をかえてください。";
             }
 
