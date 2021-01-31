@@ -17,7 +17,7 @@ namespace Lottery
 
         protected List<DateTime> getMonthStartEnd(int month_index)
         {
-            string month_str = month_index.ToString("D2");
+            string month_str = (month_index + 1).ToString("D2");
             DateTime dt1 = DateTime.ParseExact(month_str, "MM", null);
             DateTime dt2 = dt1.AddMonths(1).AddDays(-1);
             List <DateTime> days = new List<DateTime>() { dt1, dt2 };
