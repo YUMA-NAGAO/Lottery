@@ -12,7 +12,7 @@ namespace Lottery
 {
     public partial class Form1 : Form
     {
-        private string student_name = "山田太郎";
+        private string student_name;
         private int student_number = 0;
         public Form1()
         {
@@ -26,7 +26,6 @@ namespace Lottery
 
         private void NomalChecked(object sender, EventArgs e)
         {
-			// student_name = "森田盛岡";
 			CalcData cldata = new CalcData();
 			student_name = cldata.getRandStudentName();
 

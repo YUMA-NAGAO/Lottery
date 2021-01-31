@@ -2,13 +2,7 @@ using System;
 using System.IO;
 using System.Collections.Generic;
 
-//public class test{
-//    public static void Main(String[] args){
-//        ClassData data = new ClassData("class.csv");
-//        Console.WriteLine(data.getStudentData(1).getBirth());
-//        //Console.WriteLine(data.getStudentName(1));
-//    }
-//}
+
 namespace Lottery
 {
     public class ClassData
@@ -33,74 +27,10 @@ namespace Lottery
         }
 
         //指定位置の生徒のデータを返す
-        public Student getStudentData(int n)
+        public List<Student> getStudentList()
         {
-            return StudentList[n];
+            return StudentList;
         }
-
-        //Listのデータ数を返す
-        public int getListSize()
-        {
-            return StudentList.Count;
-        }
-
-        //名前から生徒データを逆引き
-        public List<Student> SearchStudentName(string na)
-        {
-            List<Student> temp = new List<Student>();
-            foreach (Student s in StudentList)
-            {
-                if (string.Compare(na, s.getName()) == 0)
-                {
-                    temp.Add(s);
-                }
-            }
-            return temp;
-        }
-
-        //誕生日から生徒データを逆引き
-        public List<Student> SearchStudentBirth(DateTime bt1, DateTime bt2)
-        {
-            List<Student> temp = new List<Student>();
-            foreach (Student s in StudentList)
-            {
-                if (bt1.Date <= s.getBirth().Date && s.getBirth().Date <= bt2.Date)
-                {
-                    temp.Add(s);
-                }
-            }
-            return temp;
-        }
-
-        //出席番号から生徒データを逆引き
-        public Student SearchStudentNum(string n)
-        {
-            foreach (Student s in StudentList)
-            {
-                if (string.Compare(n, s.getNum()) == 0)
-                {
-                    return s;
-                }
-            }
-            return null;
-        }
-
-        /*
-        //生徒の出席番号を返す
-        public string getStudentNum(int n){
-            return StudentList[n].getNum();
-        }
-
-        //生徒の名前を返す
-        public string getStudentName(int n){
-            return StudentList[n].getName();
-        }
-
-        //生徒の誕生日を返す
-        public int getStudentBirth(int n){
-            return StudentList[n].getBirth();
-        }
-        */
     }
 
     public class Student
