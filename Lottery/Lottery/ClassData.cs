@@ -10,20 +10,42 @@ namespace Lottery
         private List<Student> StudentList;
 
         //コンストラクタ
-        public ClassData(string filename)
+        public ClassData(string filename, ref int eCheck )
         {
-            StreamReader file = new StreamReader(filename);
-            StudentList = new List<Student>();
-
-            char[] separator = new char[] { ',', ' ', '　' };
-            while (!file.EndOfStream)
+            try
             {
-                String line = file.ReadLine();
-                String[] data = line.Split(separator, StringSplitOptions.RemoveEmptyEntries);
-                Student tmp = new Student(data[0], data[1], DateTime.ParseExact(data[2], "MM/dd", null));
-                StudentList.Add(tmp);
+                ReadData(filename);
             }
-            file.Close();
+            catch(Exception)
+            {
+                eCheck = -1;
+            }
+        }
+
+        private void ReadData(string filename)
+        {
+            StreamReader file = null;
+            try
+            {
+                file = new StreamReader(filename);
+                StudentList = new List<Student>();
+
+                char[] separator = new char[] { ',', ' ', '　' };
+                while (!file.EndOfStream)
+                {
+                    string line = file.ReadLine();
+                    string[] data = line.Split(separator, StringSplitOptions.RemoveEmptyEntries);
+                    Student tmp = new Student(data[0], data[1], DateTime.ParseExact(data[2], "MM/dd", null));
+                    StudentList.Add(tmp);
+                }
+            }
+            finally
+            {
+                if (file != null)
+                {
+                    file.Close();
+                }
+            }
         }
 
         //指定位置の生徒のデータを返す
@@ -38,7 +60,7 @@ namespace Lottery
         private string number, name;
         private DateTime birthday;
 
-        public Student(String n, String na, DateTime birth)
+        public Student(string n, string na, DateTime birth)
         {
             number = n;
             name = na;

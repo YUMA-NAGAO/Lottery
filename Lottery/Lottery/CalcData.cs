@@ -6,14 +6,15 @@ namespace Lottery
 {
     public class CalcData
     {
-        ClassData cdata;
-        Random r;
-		List<Student> sList;
+        private ClassData cdata;
+        protected Random r;
+		protected List<Student> sList;
+        private int eCheck = 0;     //エラー検出用 0:正常, -1:異常
 
 		//コンストラクタ
 		public CalcData()
         {
-            cdata = new ClassData("class.csv");
+            cdata = new ClassData("class.csv",ref eCheck);
 			sList = cdata.getStudentList();
 		}
 
