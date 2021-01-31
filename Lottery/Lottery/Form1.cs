@@ -14,7 +14,7 @@ namespace Lottery
     {
         private string student_name;
 
-		CalcData calc_data;
+		ExCalcData calc_data;
 		List<string> StudentNameList;
         Random rnd = new Random();
         int RandomTime = 200;
@@ -37,7 +37,7 @@ namespace Lottery
         public Form1()
         {
 			InitializeComponent();
-            calc_data = new CalcData();
+            calc_data = new ExCalcData();
 			StudentNameList = calc_data.getStudentNameList();
 		}
 
@@ -64,6 +64,7 @@ namespace Lottery
         {
             string selectedItem = comboBox1.SelectedItem.ToString();
             int selectedIndex = comboBox1.SelectedIndex;
+            student_name = calc_data.getBirthStudentName(selectedIndex);
         }
     }
 }
