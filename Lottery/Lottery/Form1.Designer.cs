@@ -31,8 +31,11 @@ namespace Lottery
         {
             this.GatyaButton = new System.Windows.Forms.Button();
             this.result = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Nomal = new System.Windows.Forms.RadioButton();
+            this.Birthday = new System.Windows.Forms.RadioButton();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // GatyaButton
@@ -56,41 +59,75 @@ namespace Lottery
             this.result.TabIndex = 3;
             this.result.Text = "抽選結果";
             // 
-            // radioButton1
+            // comboBox1
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(221, 322);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(49, 17);
-            this.radioButton1.TabIndex = 4;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "通常";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.NomalChecked);
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "1月",
+            "2月",
+            "3月",
+            "4月",
+            "5月",
+            "6月",
+            "7月",
+            "8月",
+            "9月",
+            "10月",
+            "11月",
+            "12月"});
+            this.comboBox1.Location = new System.Drawing.Point(74, 60);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 5;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // radioButton2
+            // groupBox1
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(221, 367);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(61, 17);
-            this.radioButton2.TabIndex = 4;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "誕生日";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            this.radioButton2.CheckedChanged += new System.EventHandler(this.BirthdayChecked);
+            this.groupBox1.Controls.Add(this.Birthday);
+            this.groupBox1.Controls.Add(this.Nomal);
+            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Location = new System.Drawing.Point(155, 294);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(200, 100);
+            this.groupBox1.TabIndex = 5;
+            this.groupBox1.TabStop = false;
+            // 
+            // Nomal
+            // 
+            this.Nomal.AutoSize = true;
+            this.Nomal.Location = new System.Drawing.Point(0, 13);
+            this.Nomal.Name = "Nomal";
+            this.Nomal.Size = new System.Drawing.Size(49, 17);
+            this.Nomal.TabIndex = 6;
+            this.Nomal.TabStop = true;
+            this.Nomal.Text = "通常";
+            this.Nomal.UseVisualStyleBackColor = true;
+            this.Nomal.Click += new System.EventHandler(this.NomalChecked);
+            // 
+            // Birthday
+            // 
+            this.Birthday.AutoSize = true;
+            this.Birthday.Location = new System.Drawing.Point(0, 63);
+            this.Birthday.Name = "Birthday";
+            this.Birthday.Size = new System.Drawing.Size(61, 17);
+            this.Birthday.TabIndex = 7;
+            this.Birthday.TabStop = true;
+            this.Birthday.Text = "誕生日";
+            this.Birthday.UseVisualStyleBackColor = true;
+            this.Birthday.Click += new System.EventHandler(this.BirthdayChecked);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.result);
             this.Controls.Add(this.GatyaButton);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -100,8 +137,10 @@ namespace Lottery
 
         private System.Windows.Forms.Button GatyaButton;
         private System.Windows.Forms.Label result;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton Birthday;
+        private System.Windows.Forms.RadioButton Nomal;
     }
 }
 

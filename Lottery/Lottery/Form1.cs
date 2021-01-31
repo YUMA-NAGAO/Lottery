@@ -12,22 +12,25 @@ namespace Lottery
 {
     public partial class Form1 : Form
     {
-        private string student_name="なた";
-		// private int student_number = 0;
+        private string student_name;
+
 		CalcData calc_data;
 		List<string> StudentNameList;
         Random rnd = new Random();
+        int RandomTime = 200;
 
         public async void RandomShowStudent()
         {
             int RandomNum = 0;
  //           for文の回数で、時間を決めています。
-            for (int i = 0; i < 200; i ++)
+            for (int i = 0; i < RandomTime; i ++)
             {
                 RandomNum = rnd.Next(StudentNameList.Count);
                 this.result.Text = StudentNameList[RandomNum];
                 await Task.Delay(1);
             }
+
+            this.result.Text =student_name;
         }
 
 
@@ -40,27 +43,27 @@ namespace Lottery
 
         private void GatyaButtonClicked(object sender, EventArgs e)
         {
-            Console.WriteLine(student_name);
+
             RandomShowStudent();
-            this.result.Text = student_name;
-            Console.WriteLine(student_name);
+                        
         }
 
         private void NomalChecked(object sender, EventArgs e)
 		{
-			student_name = calc_data.getRandStudentName();
-
-		}
+            comboBox1.Visible=false;
+            student_name = calc_data.getRandStudentName();
+        }
 
         private void BirthdayChecked(object sender, EventArgs e)
         {
-            student_name = "川上雷";
-
+            comboBox1.Visible = true;
+         
         }
 
-        private void Nomal_CheckedChanged(object sender, EventArgs e)
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            string selectedItem = comboBox1.SelectedItem.ToString();
+            int selectedIndex = comboBox1.SelectedIndex;
         }
     }
 }
