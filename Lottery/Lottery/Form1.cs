@@ -21,15 +21,16 @@ namespace Lottery
 
         private void GatyaButtonClicked(object sender, EventArgs e)
         {
-            
             this.result.Text = student_name;
         }
 
         private void NomalChecked(object sender, EventArgs e)
         {
-            student_name = "森田盛岡";
+			// student_name = "森田盛岡";
+			CalcData cldata = new CalcData();
+			student_name = cldata.getRandStudentName();
 
-        }
+		}
 
         private void BirthdayChecked(object sender, EventArgs e)
         {
