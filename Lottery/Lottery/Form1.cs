@@ -12,11 +12,26 @@ namespace Lottery
 {
     public partial class Form1 : Form
     {
-        private string student_name;
+        private string student_name="なた";
 		// private int student_number = 0;
 		CalcData calc_data;
 		List<string> StudentNameList;
-		public Form1()
+        Random rnd = new Random();
+
+        public async void RandomShowStudent()
+        {
+            int RandomNum = 0;
+ //           for文の回数で、時間を決めています。
+            for (int i = 0; i < 200; i ++)
+            {
+                RandomNum = rnd.Next(StudentNameList.Count);
+                this.result.Text = StudentNameList[RandomNum];
+                await Task.Delay(1);
+            }
+        }
+
+
+        public Form1()
         {
 			InitializeComponent();
             calc_data = new CalcData();
@@ -25,7 +40,10 @@ namespace Lottery
 
         private void GatyaButtonClicked(object sender, EventArgs e)
         {
+            Console.WriteLine(student_name);
+            RandomShowStudent();
             this.result.Text = student_name;
+            Console.WriteLine(student_name);
         }
 
         private void NomalChecked(object sender, EventArgs e)
