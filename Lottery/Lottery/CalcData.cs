@@ -2,18 +2,25 @@ using System;
 using System.IO;
 using System.Collections.Generic;
 
-public class CalcData
+namespace Lottery
 {
-	int rvalue;
-	//コンストラクタ
-	public CalcData()
-	{
-		ClassData cdata = new ClassData();
-		Random r = new System.Random();
-	}
+    public class CalcData
+    {
+        int rvalue;
+        ClassData cdata;
+        Random r;
 
-	public getRandStudentName()
-	{
-		return cdata.getStudentData(r.Next(0, cdata.getListSize())).getName();
-	}
+        //コンストラクタ
+        public CalcData()
+        {
+            cdata = new ClassData("class.csv");
+            r = new System.Random();
+        }
+
+        public string getRandStudentName()
+        {
+            return cdata.getStudentData(r.Next(0, cdata.getListSize())).getName();
+        }
+    }
+
 }
