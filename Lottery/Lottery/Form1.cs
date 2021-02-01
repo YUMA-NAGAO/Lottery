@@ -43,9 +43,7 @@ namespace Lottery
 
         private void GatyaButtonClicked(object sender, EventArgs e)
         {
-
             RandomShowStudent();
-                        
         }
 
         private void NomalChecked(object sender, EventArgs e)
@@ -57,7 +55,6 @@ namespace Lottery
         private void BirthdayChecked(object sender, EventArgs e)
         {
             comboBox1.Visible = true;
-         
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
