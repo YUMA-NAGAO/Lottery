@@ -41,10 +41,9 @@ namespace Lottery
             // GatyaButton
             // 
             this.GatyaButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
-            this.GatyaButton.Location = new System.Drawing.Point(749, 378);
-            this.GatyaButton.Margin = new System.Windows.Forms.Padding(4);
+            this.GatyaButton.Location = new System.Drawing.Point(562, 307);
             this.GatyaButton.Name = "GatyaButton";
-            this.GatyaButton.Size = new System.Drawing.Size(445, 95);
+            this.GatyaButton.Size = new System.Drawing.Size(334, 77);
             this.GatyaButton.TabIndex = 0;
             this.GatyaButton.Text = "抽選スタート！！！";
             this.GatyaButton.UseVisualStyleBackColor = true;
@@ -54,10 +53,9 @@ namespace Lottery
             // 
             this.result.AutoSize = true;
             this.result.Font = new System.Drawing.Font("Microsoft Sans Serif", 80F);
-            this.result.Location = new System.Drawing.Point(13, 63);
-            this.result.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.result.Location = new System.Drawing.Point(10, 51);
             this.result.Name = "result";
-            this.result.Size = new System.Drawing.Size(601, 153);
+            this.result.Size = new System.Drawing.Size(478, 120);
             this.result.TabIndex = 3;
             this.result.Text = "抽選結果";
             // 
@@ -77,10 +75,9 @@ namespace Lottery
             "10月",
             "11月",
             "12月"});
-            this.comboBox1.Location = new System.Drawing.Point(363, 115);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBox1.Location = new System.Drawing.Point(272, 93);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(160, 24);
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 5;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -89,11 +86,9 @@ namespace Lottery
             this.groupBox1.Controls.Add(this.Birthday);
             this.groupBox1.Controls.Add(this.Nomal);
             this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Location = new System.Drawing.Point(113, 334);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Location = new System.Drawing.Point(85, 271);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(576, 207);
+            this.groupBox1.Size = new System.Drawing.Size(432, 168);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             // 
@@ -101,12 +96,10 @@ namespace Lottery
             // 
             this.Birthday.AutoSize = true;
             this.Birthday.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
-            this.Birthday.Location = new System.Drawing.Point(0, 93);
-            this.Birthday.Margin = new System.Windows.Forms.Padding(4);
+            this.Birthday.Location = new System.Drawing.Point(0, 76);
             this.Birthday.Name = "Birthday";
-            this.Birthday.Size = new System.Drawing.Size(196, 62);
+            this.Birthday.Size = new System.Drawing.Size(158, 50);
             this.Birthday.TabIndex = 7;
-            this.Birthday.TabStop = true;
             this.Birthday.Text = "誕生月";
             this.Birthday.UseVisualStyleBackColor = true;
             this.Birthday.Click += new System.EventHandler(this.BirthdayChecked);
@@ -114,11 +107,11 @@ namespace Lottery
             // Nomal
             // 
             this.Nomal.AutoSize = true;
+            this.Nomal.Checked = true;
             this.Nomal.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
-            this.Nomal.Location = new System.Drawing.Point(0, 16);
-            this.Nomal.Margin = new System.Windows.Forms.Padding(4);
+            this.Nomal.Location = new System.Drawing.Point(0, 13);
             this.Nomal.Name = "Nomal";
-            this.Nomal.Size = new System.Drawing.Size(146, 62);
+            this.Nomal.Size = new System.Drawing.Size(118, 50);
             this.Nomal.TabIndex = 6;
             this.Nomal.TabStop = true;
             this.Nomal.Text = "通常";
@@ -127,13 +120,12 @@ namespace Lottery
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1230, 554);
+            this.ClientSize = new System.Drawing.Size(922, 450);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.result);
             this.Controls.Add(this.GatyaButton);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.groupBox1.ResumeLayout(false);

@@ -18,7 +18,9 @@ namespace Lottery
 		List<string> StudentNameList;
         Random rnd = new Random();
         int RandomTime = 200;
-
+        //誕生付きの選択肢を保持する変数
+        int selectedIndex;
+        string selectedItem;
         public async void RandomShowStudent()
         {
             int RandomNum = 0;
@@ -39,17 +41,31 @@ namespace Lottery
 			InitializeComponent();
             calc_data = new ExCalcData();
 			StudentNameList = calc_data.getStudentNameList();
-		}
+            //初期条件で、誕生月の選択肢を、隠すため
+            if (Nomal.Checked == true)
+            {
+                comboBox1.Visible = false;
+            }
+
+        }
 
         private void GatyaButtonClicked(object sender, EventArgs e)
         {
+            if (Nomal.Checked == true)
+            {
+                student_name = calc_data.getRandStudentName();
+            }
+            else if (Birthday.Checked == true)
+            {
+                student_name = calc_data.getBirthStudentName(selectedIndex);
+            }
             RandomShowStudent();
         }
 
         private void NomalChecked(object sender, EventArgs e)
 		{
             comboBox1.Visible=false;
-            student_name = calc_data.getRandStudentName();
+            
         }
 
         private void BirthdayChecked(object sender, EventArgs e)
@@ -59,9 +75,9 @@ namespace Lottery
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string selectedItem = comboBox1.SelectedItem.ToString();
-            int selectedIndex = comboBox1.SelectedIndex;
-            student_name = calc_data.getBirthStudentName(selectedIndex);
+            selectedItem = comboBox1.SelectedItem.ToString();
+            selectedIndex = comboBox1.SelectedIndex;
+
         }
     }
 }
