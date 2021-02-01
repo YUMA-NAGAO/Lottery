@@ -41,7 +41,7 @@ namespace Lottery
             // GatyaButton
             // 
             this.GatyaButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
-            this.GatyaButton.Location = new System.Drawing.Point(963, 360);
+            this.GatyaButton.Location = new System.Drawing.Point(749, 378);
             this.GatyaButton.Margin = new System.Windows.Forms.Padding(4);
             this.GatyaButton.Name = "GatyaButton";
             this.GatyaButton.Size = new System.Drawing.Size(445, 95);
@@ -107,7 +107,7 @@ namespace Lottery
             this.Birthday.Size = new System.Drawing.Size(196, 62);
             this.Birthday.TabIndex = 7;
             this.Birthday.TabStop = true;
-            this.Birthday.Text = "誕生日";
+            this.Birthday.Text = "誕生月";
             this.Birthday.UseVisualStyleBackColor = true;
             this.Birthday.Click += new System.EventHandler(this.BirthdayChecked);
             // 
@@ -129,7 +129,7 @@ namespace Lottery
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1598, 554);
+            this.ClientSize = new System.Drawing.Size(1230, 554);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.result);
             this.Controls.Add(this.GatyaButton);

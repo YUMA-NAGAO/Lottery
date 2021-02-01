@@ -38,7 +38,7 @@ namespace Lottery
             else
             {
                 sList = cdata.getStudentList();
-                return "誕生月の人がいませんでした。対象月をかえてください。";
+                return "誕生月の人がいませんでした。\n対象月をかえてください。";
             }
 
             
