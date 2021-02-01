@@ -22,7 +22,7 @@ namespace Lottery
         public async void RandomShowStudent()
         {
             int RandomNum = 0;
- //           for文の回数で、時間を決めています。
+             //for文の回数で、時間を決めています。
             for (int i = 0; i < RandomTime; i ++)
             {
                 RandomNum = rnd.Next(StudentNameList.Count);
