@@ -19,7 +19,7 @@ namespace Lottery
             Form1 LotteryApp = new Form1();
             if (LotteryApp.getErrorCheck() == 0)
             {
-                Application.Run();
+                Application.Run(LotteryApp);
             }
         }
     }
