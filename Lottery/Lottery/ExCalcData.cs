@@ -5,15 +5,9 @@ namespace Lottery
 {
     public class ExCalcData : CalcData
     {
-        private ClassData cdata;
-        private int eCheck = 0;     //エラー検出用 0:正常, -1:異常
 
         //コンストラクタ
-        public ExCalcData()
-        {
-            cdata = new ClassData("class.csv", ref eCheck);
-            sList = cdata.getStudentList();
-        }
+        public ExCalcData(ref int eCheck) : base(ref eCheck){}
 
         protected List<DateTime> getMonthStartEnd(int month_index)
         {

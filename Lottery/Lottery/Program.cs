@@ -16,7 +16,11 @@ namespace Lottery
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Form1 LotteryApp = new Form1();
+            if (LotteryApp.getErrorCheck() == 0)
+            {
+                Application.Run();
+            }
         }
     }
 }

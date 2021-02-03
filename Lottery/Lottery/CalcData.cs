@@ -6,17 +6,19 @@ namespace Lottery
 {
     public class CalcData
     {
-        private ClassData cdata;
+        protected ClassData cdata;
         protected Random r;
 		protected List<Student> sList;
-        private int eCheck = 0;     //エラー検出用 0:正常, -1:異常
 
-		//コンストラクタ
-		public CalcData()
+        //コンストラクタ
+        public CalcData(ref int eCheck)
         {
-            cdata = new ClassData("class.csv",ref eCheck);
-			sList = cdata.getStudentList();
-		}
+            cdata = new ClassData("class.csv", ref eCheck);
+            if (eCheck == 0)
+            {
+                sList = cdata.getStudentList();
+            }
+        }
 
         // ランダムに生徒の名前を返す
         public string getRandStudentName()
