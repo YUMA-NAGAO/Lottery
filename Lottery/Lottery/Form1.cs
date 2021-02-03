@@ -21,6 +21,13 @@ namespace Lottery
         //誕生付きの選択肢を保持する変数
         int selectedIndex;
         string selectedItem;
+        private int eCheck = 0;   //エラー検出用 0:正常, -1:異常
+
+        public int getErrorCheck()
+        {
+            return eCheck;
+        }
+
         public async void RandomShowStudent()
         {
             int RandomNum = 0;
@@ -39,13 +46,21 @@ namespace Lottery
         public Form1()
         {
 			InitializeComponent();
-            calc_data = new ExCalcData();
-			StudentNameList = calc_data.getStudentNameList();
-            //初期条件で、誕生月の選択肢を、隠すため
-            if (Nomal.Checked == true)
+            calc_data = new ExCalcData(ref eCheck);
+            if(eCheck == 0)
             {
-                comboBox1.Visible = false;
+                StudentNameList = calc_data.getStudentNameList();
+                //初期条件で、誕生月の選択肢を、隠すため
+                if (Nomal.Checked == true)
+                {
+                    comboBox1.Visible = false;
+                }
             }
+            else
+            {
+                this.Close();
+            }
+			
 
         }
 

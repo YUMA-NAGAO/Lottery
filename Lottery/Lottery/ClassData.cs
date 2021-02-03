@@ -10,7 +10,7 @@ namespace Lottery
         private List<Student> StudentList;
 
         //コンストラクタ
-        public ClassData(string filename, ref int eCheck )
+        public ClassData(string filename, ref int eCheck)
         {
             try
             {
@@ -19,6 +19,7 @@ namespace Lottery
             catch(Exception)
             {
                 eCheck = -1;
+                ErrorHandling.ErrorPopup("Not found " + filename);
             }
         }
 
