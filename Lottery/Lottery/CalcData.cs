@@ -36,7 +36,7 @@ namespace Lottery
 			// 全生徒のflgがtrueになったらリセット
 			if (temp.Count <= 0)
 			{
-				MessageBox.Show("Reset.");
+				MessageBox.Show("全生徒が指名されました。"+ Environment.NewLine +"リセットして抽選を再開します。");
 				foreach (Student s in sList)
 				{
 					s.setFlg(false);

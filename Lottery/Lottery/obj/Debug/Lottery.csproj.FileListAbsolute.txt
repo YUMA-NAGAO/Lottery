@@ -21,6 +21,7 @@ C:\Users\acfoa\OneDrive - 独立行政法人 国立高等専門学校機構\01�
 C:\Users\Kosuke SUZUKI\Documents\GitHub\Lottery\Lottery\Lottery\bin\Debug\Lottery.exe.config
 C:\Users\Kosuke SUZUKI\Documents\GitHub\Lottery\Lottery\Lottery\bin\Debug\Lottery.exe
 C:\Users\Kosuke SUZUKI\Documents\GitHub\Lottery\Lottery\Lottery\bin\Debug\Lottery.pdb
+C:\Users\Kosuke SUZUKI\Documents\GitHub\Lottery\Lottery\Lottery\obj\Debug\Lottery.csprojAssemblyReference.cache
 C:\Users\Kosuke SUZUKI\Documents\GitHub\Lottery\Lottery\Lottery\obj\Debug\Lottery.Form1.resources
 C:\Users\Kosuke SUZUKI\Documents\GitHub\Lottery\Lottery\Lottery\obj\Debug\Lottery.Properties.Resources.resources
 C:\Users\Kosuke SUZUKI\Documents\GitHub\Lottery\Lottery\Lottery\obj\Debug\Lottery.csproj.GenerateResource.cache
