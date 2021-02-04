@@ -41,9 +41,9 @@ namespace Lottery
             // GatyaButton
             // 
             this.GatyaButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
-            this.GatyaButton.Location = new System.Drawing.Point(562, 307);
+            this.GatyaButton.Location = new System.Drawing.Point(562, 283);
             this.GatyaButton.Name = "GatyaButton";
-            this.GatyaButton.Size = new System.Drawing.Size(334, 77);
+            this.GatyaButton.Size = new System.Drawing.Size(334, 71);
             this.GatyaButton.TabIndex = 0;
             this.GatyaButton.Text = "抽選スタート！！！";
             this.GatyaButton.UseVisualStyleBackColor = true;
@@ -53,7 +53,7 @@ namespace Lottery
             // 
             this.result.AutoSize = true;
             this.result.Font = new System.Drawing.Font("Microsoft Sans Serif", 80F);
-            this.result.Location = new System.Drawing.Point(10, 51);
+            this.result.Location = new System.Drawing.Point(10, 47);
             this.result.Name = "result";
             this.result.Size = new System.Drawing.Size(478, 120);
             this.result.TabIndex = 3;
@@ -61,6 +61,7 @@ namespace Lottery
             // 
             // comboBox1
             // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "1月",
@@ -75,9 +76,9 @@ namespace Lottery
             "10月",
             "11月",
             "12月"});
-            this.comboBox1.Location = new System.Drawing.Point(272, 93);
+            this.comboBox1.Location = new System.Drawing.Point(272, 86);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.Size = new System.Drawing.Size(121, 20);
             this.comboBox1.TabIndex = 5;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -86,9 +87,9 @@ namespace Lottery
             this.groupBox1.Controls.Add(this.Birthday);
             this.groupBox1.Controls.Add(this.Nomal);
             this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Location = new System.Drawing.Point(85, 271);
+            this.groupBox1.Location = new System.Drawing.Point(85, 250);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(432, 168);
+            this.groupBox1.Size = new System.Drawing.Size(432, 155);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             // 
@@ -96,7 +97,7 @@ namespace Lottery
             // 
             this.Birthday.AutoSize = true;
             this.Birthday.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
-            this.Birthday.Location = new System.Drawing.Point(0, 76);
+            this.Birthday.Location = new System.Drawing.Point(0, 70);
             this.Birthday.Name = "Birthday";
             this.Birthday.Size = new System.Drawing.Size(158, 50);
             this.Birthday.TabIndex = 7;
@@ -109,7 +110,7 @@ namespace Lottery
             this.Nomal.AutoSize = true;
             this.Nomal.Checked = true;
             this.Nomal.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
-            this.Nomal.Location = new System.Drawing.Point(0, 13);
+            this.Nomal.Location = new System.Drawing.Point(0, 12);
             this.Nomal.Name = "Nomal";
             this.Nomal.Size = new System.Drawing.Size(118, 50);
             this.Nomal.TabIndex = 6;
@@ -120,9 +121,9 @@ namespace Lottery
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(922, 450);
+            this.ClientSize = new System.Drawing.Size(922, 415);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.result);
             this.Controls.Add(this.GatyaButton);

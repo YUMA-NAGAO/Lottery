@@ -26,3 +26,4 @@
 1. [C# ラジオボタンの作成のサンプル(フォームアプリケーション)](https://itsakura.com/csharp-form-radiobutton)
 1. [Control.Visible プロパティ](https://docs.microsoft.com/ja-jp/dotnet/api/system.windows.forms.control.visible?view=net-5.0)
 1. [RadioButtonのチェック状態を取得する - C#プログラミング](https://www.ipentec.com/document/csharp-using-radiobutton)
+1. [コンボボックス（ComboBoxコントロール）を読み取り専用にするには？［C#、VB］](https://www.atmarkit.co.jp/ait/articles/0711/01/news152.html)
