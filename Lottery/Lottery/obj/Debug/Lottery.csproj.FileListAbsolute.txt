@@ -18,3 +18,12 @@ C:\Users\acfoa\OneDrive - 独立行政法人 国立高等専門学校機構\01�
 C:\Users\acfoa\OneDrive - 独立行政法人 国立高等専門学校機構\01専攻科\01授業\2年_課題など\オブジェクト指向\Lottery\Lottery\Lottery\obj\Debug\Lottery.csproj.CoreCompileInputs.cache
 C:\Users\acfoa\OneDrive - 独立行政法人 国立高等専門学校機構\01専攻科\01授業\2年_課題など\オブジェクト指向\Lottery\Lottery\Lottery\obj\Debug\Lottery.exe
 C:\Users\acfoa\OneDrive - 独立行政法人 国立高等専門学校機構\01専攻科\01授業\2年_課題など\オブジェクト指向\Lottery\Lottery\Lottery\obj\Debug\Lottery.pdb
+C:\Users\Kosuke SUZUKI\Documents\GitHub\Lottery\Lottery\Lottery\bin\Debug\Lottery.exe.config
+C:\Users\Kosuke SUZUKI\Documents\GitHub\Lottery\Lottery\Lottery\bin\Debug\Lottery.exe
+C:\Users\Kosuke SUZUKI\Documents\GitHub\Lottery\Lottery\Lottery\bin\Debug\Lottery.pdb
+C:\Users\Kosuke SUZUKI\Documents\GitHub\Lottery\Lottery\Lottery\obj\Debug\Lottery.Form1.resources
+C:\Users\Kosuke SUZUKI\Documents\GitHub\Lottery\Lottery\Lottery\obj\Debug\Lottery.Properties.Resources.resources
+C:\Users\Kosuke SUZUKI\Documents\GitHub\Lottery\Lottery\Lottery\obj\Debug\Lottery.csproj.GenerateResource.cache
+C:\Users\Kosuke SUZUKI\Documents\GitHub\Lottery\Lottery\Lottery\obj\Debug\Lottery.csproj.CoreCompileInputs.cache
+C:\Users\Kosuke SUZUKI\Documents\GitHub\Lottery\Lottery\Lottery\obj\Debug\Lottery.exe
+C:\Users\Kosuke SUZUKI\Documents\GitHub\Lottery\Lottery\Lottery\obj\Debug\Lottery.pdb

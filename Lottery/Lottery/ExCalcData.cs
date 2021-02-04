@@ -5,7 +5,6 @@ namespace Lottery
 {
     public class ExCalcData : CalcData
     {
-
         //コンストラクタ
         public ExCalcData(ref int eCheck) : base(ref eCheck){}
 
@@ -23,20 +22,31 @@ namespace Lottery
             List<DateTime> days = getMonthStartEnd(selected_index);
             sList = SearchStudentBirth(days[0], days[1]);
 
-            if (sList.Count > 0)
+			int cnt = 0;
+			foreach (Student s in sList)
+			{
+				if (s.getFlg() == false)
+				{
+					cnt++;
+				}
+			}
+
+            if (sList.Count > 0 && cnt > 0)
             {
                 string return_name = getRandStudentName();
                 sList = cdata.getStudentList();
                 return return_name;
+			}
+			else if (sList.Count > 0 && cnt <= 0)
+			{
+                sList = cdata.getStudentList();
+                return "誕生月の人を全て当てました。\n対象月をかえてください。";
             }
             else
             {
                 sList = cdata.getStudentList();
                 return "誕生月の人がいませんでした。\n対象月をかえてください。";
             }
-
-            
         }
-
     }
 }

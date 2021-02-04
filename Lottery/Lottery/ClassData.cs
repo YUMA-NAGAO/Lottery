@@ -59,16 +59,16 @@ namespace Lottery
     public class Student
     {
         private string number, name;
-        private DateTime birthday;
+		private DateTime birthday;
+		private bool flg;
 
-        public Student(string n, string na, DateTime birth)
+		public Student(string n, string na, DateTime birth)
         {
             number = n;
             name = na;
-            birthday = birth;
-        }
-
-
+			birthday = birth;
+			flg = false;
+		}
         public string getNum()
         {
             return number;
@@ -83,7 +83,14 @@ namespace Lottery
         {
             return birthday;
         }
-
+		public void setFlg(bool b)
+		{
+			flg = b;
+		}
+		public bool getFlg()
+		{
+			return flg;
+		}
     }
 
 }
