@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Windows.Forms;
 
 namespace Lottery
 {
@@ -39,13 +40,15 @@ namespace Lottery
 			}
 			else if (sList.Count > 0 && cnt <= 0)
 			{
-                sList = cdata.getStudentList();
-                return "誕生月の人を全て当てました。\n対象月をかえてください。";
+				sList = cdata.getStudentList();
+                MessageBox.Show("誕生月の人を全て当てました。"+ Environment.NewLine +"対象月をかえてください。");
+                return null;
             }
             else
             {
-                sList = cdata.getStudentList();
-                return "誕生月の人がいませんでした。\n対象月をかえてください。";
+				sList = cdata.getStudentList();
+                MessageBox.Show("誕生月の人がいませんでした。"+ Environment.NewLine +"対象月をかえてください。");
+                return null;
             }
         }
     }

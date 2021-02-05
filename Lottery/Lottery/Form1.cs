@@ -60,8 +60,6 @@ namespace Lottery
             {
                 this.Close();
             }
-			
-
         }
 
         private void GatyaButtonClicked(object sender, EventArgs e)
@@ -73,14 +71,17 @@ namespace Lottery
             else if (Birthday.Checked == true)
             {
                 student_name = calc_data.getBirthStudentName(selectedIndex);
-            }
-            RandomShowStudent();
-        }
+			}
+
+			if (student_name != null)
+			{
+				RandomShowStudent();
+			}
+		}
 
         private void NomalChecked(object sender, EventArgs e)
 		{
             comboBox1.Visible=false;
-            
         }
 
         private void BirthdayChecked(object sender, EventArgs e)
