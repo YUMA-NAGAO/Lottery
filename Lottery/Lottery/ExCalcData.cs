@@ -20,11 +20,11 @@ namespace Lottery
 
         public string getBirthStudentName(int selected_index)
         {
-            List<DateTime> days = getMonthStartEnd(selected_index);
-            sList = SearchStudentBirth(days[0], days[1]);
-
+			List<DateTime> days = getMonthStartEnd(selected_index);
 			int cnt = 0;
-			foreach (Student s in sList)
+
+            // 全生徒の中でまだ指名されていない人がいるか確認
+            foreach (Student s in sList)
 			{
 				if (s.getFlg() == false)
 				{
@@ -32,6 +32,26 @@ namespace Lottery
 				}
 			}
 
+            // 全員指名されていたらリセット
+			if (cnt <= 0)
+			{
+				MessageBox.Show("全生徒が指名されました。" + Environment.NewLine + "リセットして抽選を再開します。");
+				foreach (Student s in sList)
+				{
+					s.setFlg(false);
+				}
+			}
+
+            // 誕生月を絞ってルーレット開始
+			sList = SearchStudentBirth(days[0], days[1]);
+			cnt = 0;
+			foreach (Student s in sList)
+			{
+				if (s.getFlg() == false)
+				{
+					cnt++;
+				}
+			}
             if (sList.Count > 0 && cnt > 0)
             {
                 string return_name = getRandStudentName();
