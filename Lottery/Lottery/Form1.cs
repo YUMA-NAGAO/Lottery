@@ -12,6 +12,7 @@ namespace Lottery
 {
     public partial class Form1 : Form
     {
+
         private string student_name;
 
 		ExCalcData calc_data;
@@ -46,6 +47,7 @@ namespace Lottery
         public Form1()
         {
 			InitializeComponent();
+
             calc_data = new ExCalcData(ref eCheck);
             if(eCheck == 0)
             {
@@ -54,6 +56,7 @@ namespace Lottery
                 if (Nomal.Checked == true)
                 {
                     comboBox1.Visible = false;
+                    GatyaButton.Visible = false;
                 }
             }
             else
@@ -94,6 +97,11 @@ namespace Lottery
             selectedItem = comboBox1.SelectedItem.ToString();
             selectedIndex = comboBox1.SelectedIndex;
 
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            GatyaButton.Visible = true;
         }
     }
 }

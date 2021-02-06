@@ -13,7 +13,7 @@ namespace Lottery
 		/* コンストラクタ */
 		public CalcData(ref int eCheck)
 		{
-			m_classData = new ClassData("class.csv", ref eCheck);
+			m_classData = new ClassData("../../ClassDataCSV/class2.csv", ref eCheck);
 			if (eCheck == 0)
 			{
 				m_studentList = m_classData.getStudentList();
