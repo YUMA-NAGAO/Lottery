@@ -27,3 +27,7 @@
 1. [Control.Visible プロパティ](https://docs.microsoft.com/ja-jp/dotnet/api/system.windows.forms.control.visible?view=net-5.0)
 1. [RadioButtonのチェック状態を取得する - C#プログラミング](https://www.ipentec.com/document/csharp-using-radiobutton)
 1. [コンボボックス（ComboBoxコントロール）を読み取り専用にするには？［C#、VB］](https://www.atmarkit.co.jp/ait/articles/0711/01/news152.html)
+1. [Array.Resize<T>(T[], Int32) メソッド](https://docs.microsoft.com/ja-jp/dotnet/api/system.array.resize?view=net-5.0)
+1. [ComboBox.ObjectCollection.AddRange(Object[]) メソッド](https://docs.microsoft.com/ja-jp/dotnet/api/system.windows.forms.combobox.objectcollection.addrange?view=net-5.0)
+1. [Directory.GetFiles メソッド](https://docs.microsoft.com/ja-jp/dotnet/api/system.io.directory.getfiles?view=net-5.0)
+1. [コンボボックスに項目を追加する - コンボボックスのドロップダウンリストに追加する - C#プログラミング](https://www.ipentec.com/document/csharp-combobox-add-item)
