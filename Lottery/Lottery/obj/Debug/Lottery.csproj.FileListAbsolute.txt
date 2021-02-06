@@ -27,3 +27,4 @@ C:\Users\Kosuke SUZUKI\Documents\GitHub\Lottery\Lottery\Lottery\obj\Debug\Lotter
 C:\Users\Kosuke SUZUKI\Documents\GitHub\Lottery\Lottery\Lottery\obj\Debug\Lottery.csproj.CoreCompileInputs.cache
 C:\Users\Kosuke SUZUKI\Documents\GitHub\Lottery\Lottery\Lottery\obj\Debug\Lottery.exe
 C:\Users\Kosuke SUZUKI\Documents\GitHub\Lottery\Lottery\Lottery\obj\Debug\Lottery.pdb
+C:\Users\Kosuke SUZUKI\Documents\GitHub\Lottery\Lottery\Lottery\obj\Debug\Lottery.csprojAssemblyReference.cache

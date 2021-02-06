@@ -66,7 +66,7 @@ namespace Lottery
         {
             if (Nomal.Checked == true)
             {
-                student_name = calc_data.getRandStudentName();
+                student_name = calc_data.getDefaultStudentName();
             }
             else if (Birthday.Checked == true)
             {
