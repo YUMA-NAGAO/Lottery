@@ -28,3 +28,13 @@ C:\Users\Kosuke SUZUKI\Documents\GitHub\Lottery\Lottery\Lottery\obj\Debug\Lotter
 C:\Users\Kosuke SUZUKI\Documents\GitHub\Lottery\Lottery\Lottery\obj\Debug\Lottery.exe
 C:\Users\Kosuke SUZUKI\Documents\GitHub\Lottery\Lottery\Lottery\obj\Debug\Lottery.pdb
 C:\Users\Kosuke SUZUKI\Documents\GitHub\Lottery\Lottery\Lottery\obj\Debug\Lottery.csprojAssemblyReference.cache
+C:\Users\mkato\Documents\github\Lottery\Lottery\Lottery\bin\Debug\Lottery.exe.config
+C:\Users\mkato\Documents\github\Lottery\Lottery\Lottery\bin\Debug\Lottery.exe
+C:\Users\mkato\Documents\github\Lottery\Lottery\Lottery\bin\Debug\Lottery.pdb
+C:\Users\mkato\Documents\github\Lottery\Lottery\Lottery\obj\Debug\Lottery.csprojAssemblyReference.cache
+C:\Users\mkato\Documents\github\Lottery\Lottery\Lottery\obj\Debug\Lottery.Form1.resources
+C:\Users\mkato\Documents\github\Lottery\Lottery\Lottery\obj\Debug\Lottery.Properties.Resources.resources
+C:\Users\mkato\Documents\github\Lottery\Lottery\Lottery\obj\Debug\Lottery.csproj.GenerateResource.cache
+C:\Users\mkato\Documents\github\Lottery\Lottery\Lottery\obj\Debug\Lottery.csproj.CoreCompileInputs.cache
+C:\Users\mkato\Documents\github\Lottery\Lottery\Lottery\obj\Debug\Lottery.exe
+C:\Users\mkato\Documents\github\Lottery\Lottery\Lottery\obj\Debug\Lottery.pdb

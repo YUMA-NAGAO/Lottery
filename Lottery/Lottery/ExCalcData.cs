@@ -6,8 +6,9 @@ namespace Lottery
 {
 	public class ExCalcData : CalcData
 	{
-		/* コンストラクタ */
-		public ExCalcData(ref int eCheck) : base(ref eCheck){}
+
+        /* コンストラクタ */
+        public ExCalcData(ref int eCheck, string Filename) : base(ref eCheck, Filename){}
 
 		/* 指定月の日リストを取得 */
 		protected List<DateTime> getMonthStartEnd(int month_index)
@@ -22,12 +23,12 @@ namespace Lottery
 		/*  生徒選択メソッド (誕生月モード) */
 		public string getBirthStudentName(int selected_index)
 		{
-			List<Student> falseList = new List<Student>();
 			resetFlg();
 
 			// 誕生日で絞る
 			List<DateTime> days = getMonthStartEnd(selected_index);
-			List<Student> tempList = SearchStudentBirth(days[0], days[1]);
+            List<Student>  tempList = SearchStudentBirth(days[0], days[1]);
+
 			if (tempList.Count == 0)
 			{
 				MessageBox.Show("誕生月の人がいませんでした。" + Environment.NewLine + "対象月をかえてください。");

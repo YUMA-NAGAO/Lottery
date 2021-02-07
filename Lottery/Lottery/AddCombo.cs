@@ -5,21 +5,37 @@ namespace Lottery
 {
     class AddCombo
     {
-        public string[] DirectroyData()
+        public string[] DirectroyData(ref int eCheck)
         {
             string dir = "../ClassDataCSV";
-            string[] files = Directory.GetFiles(dir, "*.csv");
             string[] data = { };
-            int a = 0;
-            foreach (string s in files)
+
+            try
             {
+                string[] files = Directory.GetFiles(dir, "*.csv");
+                int a = 0;
+                if (files[0] != null)
+                {
+                    foreach (string s in files)
+                    {
 
-                Array.Resize(ref data, data.Length + 1);
-                data[a] = s.Remove(0,16);
-                a += 1;
+                        Array.Resize(ref data, data.Length + 1);
+                        data[a] = s.Remove(0, 16);
+                        a += 1;
 
+                    }
+                }
+                else
+                {
+                    eCheck = -1;
+                    ErrorHandling.ErrorPopup("Notfound csv file");
+                }
             }
-
+            catch (Exception)
+            {
+                eCheck = -1;
+                ErrorHandling.ErrorPopup("Not found Data Folder");
+            }
 
             return data;
         }
