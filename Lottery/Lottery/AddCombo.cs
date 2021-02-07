@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Linq;
 
 namespace Lottery
 {
@@ -14,19 +15,27 @@ namespace Lottery
             {
                 string[] files = Directory.GetFiles(dir, "*.csv");
                 int a = 0;
-                foreach (string s in files)
+                if (files.Count() != 0)
                 {
+                    foreach (string s in files)
+                    {
 
-                    Array.Resize(ref data, data.Length + 1);
-                    data[a] = s.Remove(0, 16);
-                    a += 1;
+                        Array.Resize(ref data, data.Length + 1);
+                        data[a] = s.Remove(0, 16);
+                        a += 1;
 
+                    }
+                }
+                else
+                {
+                    eCheck = -1;
+                    ErrorHandling.ErrorPopup("Not found CSV Data");
                 }
             }
             catch (Exception)
             {
                 eCheck = -1;
-                ErrorHandling.ErrorPopup("Not found CSV Data");
+                ErrorHandling.ErrorPopup("Not found ClassDataCSV Folder");
             }
 
             return data;
