@@ -19,9 +19,12 @@ namespace Lottery
 		List<string> StudentNameList;
         Random rnd = new Random();
         int RandomTime = 200;
-        //誕生付きの選択肢を保持する変数
+        //誕生月の選択肢を保持する変数
         int selectedIndex;
         string selectedItem;
+        //ファイルの選択肢を保持する変数
+        int selectedFileIndex;
+        string selectedFileItem;
         private int eCheck = 0;   //エラー検出用 0:正常, -1:異常
 
         public int getErrorCheck()
@@ -102,6 +105,8 @@ namespace Lottery
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
             GatyaButton.Visible = true;
+            selectedFileItem = comboBox2.SelectedItem.ToString();
+            selectedFileIndex = comboBox2.SelectedIndex;
         }
     }
 }
