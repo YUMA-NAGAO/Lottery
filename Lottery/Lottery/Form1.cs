@@ -26,7 +26,9 @@ namespace Lottery
         int selectedFileIndex;
         string selectedFileItem;
         private int eCheck = 0;   //エラー検出用 0:正常, -1:異常
-
+        //背景の写真番号を保持する変数
+        string NumImage;
+        string ImageName;
         public int getErrorCheck()
         {
             return eCheck;
@@ -53,8 +55,9 @@ namespace Lottery
         public Form1()
         {
 			InitializeComponent();
-            
-            if(eCheck == 0)
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+
+            if (eCheck == 0)
             {
                 //初期条件で、誕生月の選択肢を、隠すため
                 if (Nomal.Checked == true)
@@ -71,6 +74,9 @@ namespace Lottery
 
         private void GatyaButtonClicked(object sender, EventArgs e)
         {
+            NumImage = rnd.Next(1, 21).ToString();
+            ImageName = "Back" + NumImage;
+            pictureBox1.Image = Image.FromFile($"../../01Image/{ImageName}.jpg");
             if (Nomal.Checked == true)
             {
                 student_name = calc_data.getDefaultStudentName();
