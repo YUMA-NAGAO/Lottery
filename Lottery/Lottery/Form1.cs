@@ -12,15 +12,19 @@ namespace Lottery
 {
     public partial class Form1 : Form
     {
+
         private string student_name;
 
 		ExCalcData calc_data;
 		List<string> StudentNameList;
         Random rnd = new Random();
         int RandomTime = 200;
-        //誕生付きの選択肢を保持する変数
+        //誕生月の選択肢を保持する変数
         int selectedIndex;
         string selectedItem;
+        //ファイルの選択肢を保持する変数
+        int selectedFileIndex;
+        string selectedFileItem;
         private int eCheck = 0;   //エラー検出用 0:正常, -1:異常
 
         public int getErrorCheck()
@@ -46,6 +50,7 @@ namespace Lottery
         public Form1()
         {
 			InitializeComponent();
+
             calc_data = new ExCalcData(ref eCheck);
             if(eCheck == 0)
             {
@@ -54,6 +59,7 @@ namespace Lottery
                 if (Nomal.Checked == true)
                 {
                     comboBox1.Visible = false;
+                    GatyaButton.Visible = false;
                 }
             }
             else
@@ -94,6 +100,13 @@ namespace Lottery
             selectedItem = comboBox1.SelectedItem.ToString();
             selectedIndex = comboBox1.SelectedIndex;
 
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            GatyaButton.Visible = true;
+            selectedFileItem = comboBox2.SelectedItem.ToString();
+            selectedFileIndex = comboBox2.SelectedIndex;
         }
     }
 }
