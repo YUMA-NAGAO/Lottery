@@ -130,13 +130,13 @@ namespace Lottery
             // 
             // comboBox2
             // 
-            //AddCombo DicData = new AddCombo();
-            //string[] DictionaryData = { };
-            //DictionaryData = DicData.DirectroyData();
-            string[] testdata = { "a", "b" };
+            AddCombo DicData = new AddCombo();
+            string[] DictionaryData = { };
+            DictionaryData = DicData.DirectroyData();
+            //string[] testdata = { "a", "b" };
             this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(testdata);
+            this.comboBox2.Items.AddRange(DictionaryData);
             this.comboBox2.Location = new System.Drawing.Point(782, 161);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 24);

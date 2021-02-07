@@ -15,7 +15,7 @@ namespace Lottery
             {
 
                 Array.Resize(ref data, data.Length + 1);
-                data[a] = s.Remove(0, 65);
+                data[a] = s.Remove(0,19 );
                 a += 1;
 
             }
