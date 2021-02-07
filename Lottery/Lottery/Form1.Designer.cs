@@ -137,6 +137,7 @@ namespace Lottery
             this.comboBox2.Size = new System.Drawing.Size(121, 23);
             this.comboBox2.TabIndex = 6;
             this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            this.comboBox2.Items.AddRange(AddCombo.DirectroyData(ref eCheck));
             // 
             // Form1
             // 

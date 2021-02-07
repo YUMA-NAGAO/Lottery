@@ -35,12 +35,15 @@ namespace Lottery
         public async void RandomShowStudent()
         {
             int RandomNum = 0;
-             //for文の回数で、時間を決めています。
-            for (int i = 0; i < RandomTime; i ++)
+            if (StudentNameList.Count > 1)
             {
-                RandomNum = rnd.Next(StudentNameList.Count);
-                this.result.Text = StudentNameList[RandomNum];
-                await Task.Delay(1);
+                //for文の回数で、時間を決めています。
+                for (int i = 0; i < RandomTime; i++)
+                {
+                    RandomNum = rnd.Next(StudentNameList.Count);
+                    this.result.Text = StudentNameList[RandomNum];
+                    await Task.Delay(1);
+                }
             }
 
             this.result.Text =student_name;

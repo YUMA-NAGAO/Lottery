@@ -3,9 +3,9 @@ using System.IO;
 
 namespace Lottery
 {
-    class AddCombo
+    static class AddCombo
     {
-        public string[] DirectroyData(ref int eCheck)
+        public static string[] DirectroyData(ref int eCheck)
         {
             string dir = "../ClassDataCSV";
             string[] data = { };
