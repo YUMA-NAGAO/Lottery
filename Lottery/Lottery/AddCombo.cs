@@ -7,7 +7,7 @@ namespace Lottery
     {
         public string[] DirectroyData()
         {
-            string dir = "../../ClassDataCSV";
+            string dir = "../ClassDataCSV";
             string[] files = Directory.GetFiles(dir, "*.csv");
             string[] data = { };
             int a = 0;
@@ -15,7 +15,7 @@ namespace Lottery
             {
 
                 Array.Resize(ref data, data.Length + 1);
-                data[a] = s.Remove(0,19 );
+                data[a] = s.Remove(0,16);
                 a += 1;
 
             }
