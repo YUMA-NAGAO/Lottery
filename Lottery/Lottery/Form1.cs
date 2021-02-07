@@ -55,6 +55,7 @@ namespace Lottery
         public Form1()
         {
 			InitializeComponent();
+            comboBox2.Items.AddRange(AddCombo.DirectroyData(ref eCheck));
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
 
             if (eCheck == 0)
@@ -68,7 +69,7 @@ namespace Lottery
             }
             else
             {
-                this.Close();
+                Close();
             }
         }
 
