@@ -9,15 +9,17 @@ namespace Lottery
 		protected ClassData m_classData;
 		protected Random m_random;
 		protected List<Student> m_studentList;
+        protected List<Student> falseList;
 
-		/* コンストラクタ */
-		public CalcData(ref int eCheck)
+        /* コンストラクタ */
+        public CalcData(ref int eCheck, string Filename)
 		{
-			m_classData = new ClassData("../ClassDataCSV/class2.csv", ref eCheck);
+			m_classData = new ClassData(Filename, ref eCheck);
 			if (eCheck == 0)
 			{
 				m_studentList = m_classData.getStudentList();
-			}
+                falseList = new List<Student>();
+            }
 			m_random = new System.Random();
 		}
 
@@ -25,17 +27,19 @@ namespace Lottery
 		public List<string> getStudentNameList()
 		{
 			List<string> studentNameList = new List<string>();
-			foreach (Student s in m_studentList)
+			foreach (Student s in falseList)
 			{
 				studentNameList.Add(s.getName());
 			}
+
+            falseList.Clear();
+
 			return studentNameList;
 		}
 
 		/* 生徒選択メソッド (通常モード) */
 		public string getDefaultStudentName()
 		{
-			List<Student> falseList = new List<Student>();
 			resetFlg();
 
 			// flgで絞る

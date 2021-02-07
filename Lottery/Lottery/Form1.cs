@@ -50,11 +50,9 @@ namespace Lottery
         public Form1()
         {
 			InitializeComponent();
-
-            calc_data = new ExCalcData(ref eCheck);
+            
             if(eCheck == 0)
             {
-                StudentNameList = calc_data.getStudentNameList();
                 //初期条件で、誕生月の選択肢を、隠すため
                 if (Nomal.Checked == true)
                 {
@@ -73,17 +71,19 @@ namespace Lottery
             if (Nomal.Checked == true)
             {
                 student_name = calc_data.getDefaultStudentName();
+                StudentNameList = calc_data.getStudentNameList();
             }
             else if (Birthday.Checked == true)
             {
                 student_name = calc_data.getBirthStudentName(selectedIndex);
-			}
+                StudentNameList = calc_data.getStudentNameList();
+            }
 
-			if (student_name != null)
-			{
-				RandomShowStudent();
-			}
-		}
+            if (student_name != null)
+            {
+                RandomShowStudent();
+            }
+        }
 
         private void NomalChecked(object sender, EventArgs e)
 		{
@@ -107,6 +107,11 @@ namespace Lottery
             GatyaButton.Visible = true;
             selectedFileItem = comboBox2.SelectedItem.ToString();
             selectedFileIndex = comboBox2.SelectedIndex;
+            calc_data = new ExCalcData(ref eCheck, "../ClassDataCSV/" + selectedFileItem);
+            if(eCheck != 0)
+            {
+                this.Close();
+            }
         }
     }
 }

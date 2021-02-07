@@ -43,10 +43,10 @@ namespace Lottery
             // GatyaButton
             // 
             this.GatyaButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
-            this.GatyaButton.Location = new System.Drawing.Point(749, 377);
+            this.GatyaButton.Location = new System.Drawing.Point(749, 353);
             this.GatyaButton.Margin = new System.Windows.Forms.Padding(4);
             this.GatyaButton.Name = "GatyaButton";
-            this.GatyaButton.Size = new System.Drawing.Size(445, 95);
+            this.GatyaButton.Size = new System.Drawing.Size(445, 89);
             this.GatyaButton.TabIndex = 0;
             this.GatyaButton.Text = "抽選スタート！！！";
             this.GatyaButton.UseVisualStyleBackColor = true;
@@ -56,7 +56,7 @@ namespace Lottery
             // 
             this.result.AutoSize = true;
             this.result.Font = new System.Drawing.Font("Microsoft Sans Serif", 80F);
-            this.result.Location = new System.Drawing.Point(13, 63);
+            this.result.Location = new System.Drawing.Point(13, 59);
             this.result.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.result.Name = "result";
             this.result.Size = new System.Drawing.Size(601, 153);
@@ -80,10 +80,10 @@ namespace Lottery
             "10月",
             "11月",
             "12月"});
-            this.comboBox1.Location = new System.Drawing.Point(363, 115);
+            this.comboBox1.Location = new System.Drawing.Point(363, 108);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(160, 24);
+            this.comboBox1.Size = new System.Drawing.Size(160, 23);
             this.comboBox1.TabIndex = 5;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -92,11 +92,11 @@ namespace Lottery
             this.groupBox1.Controls.Add(this.Birthday);
             this.groupBox1.Controls.Add(this.Nomal);
             this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Location = new System.Drawing.Point(113, 333);
+            this.groupBox1.Location = new System.Drawing.Point(113, 312);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(576, 207);
+            this.groupBox1.Size = new System.Drawing.Size(576, 194);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             // 
@@ -104,7 +104,7 @@ namespace Lottery
             // 
             this.Birthday.AutoSize = true;
             this.Birthday.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
-            this.Birthday.Location = new System.Drawing.Point(0, 93);
+            this.Birthday.Location = new System.Drawing.Point(0, 87);
             this.Birthday.Margin = new System.Windows.Forms.Padding(4);
             this.Birthday.Name = "Birthday";
             this.Birthday.Size = new System.Drawing.Size(196, 62);
@@ -118,7 +118,7 @@ namespace Lottery
             this.Nomal.AutoSize = true;
             this.Nomal.Checked = true;
             this.Nomal.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
-            this.Nomal.Location = new System.Drawing.Point(0, 16);
+            this.Nomal.Location = new System.Drawing.Point(0, 15);
             this.Nomal.Margin = new System.Windows.Forms.Padding(4);
             this.Nomal.Name = "Nomal";
             this.Nomal.Size = new System.Drawing.Size(146, 62);
@@ -130,24 +130,19 @@ namespace Lottery
             // 
             // comboBox2
             // 
-            AddCombo DicData = new AddCombo();
-            string[] DictionaryData = { };
-            DictionaryData = DicData.DirectroyData();
-            //string[] testdata = { "a", "b" };
             this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(DictionaryData);
-            this.comboBox2.Location = new System.Drawing.Point(782, 161);
+            this.comboBox2.Location = new System.Drawing.Point(113, 282);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 24);
+            this.comboBox2.Size = new System.Drawing.Size(121, 23);
             this.comboBox2.TabIndex = 6;
             this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1229, 553);
+            this.ClientSize = new System.Drawing.Size(1229, 518);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.result);
