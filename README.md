@@ -31,3 +31,7 @@
 1. [ComboBox.ObjectCollection.AddRange(Object[]) メソッド](https://docs.microsoft.com/ja-jp/dotnet/api/system.windows.forms.combobox.objectcollection.addrange?view=net-5.0)
 1. [Directory.GetFiles メソッド](https://docs.microsoft.com/ja-jp/dotnet/api/system.io.directory.getfiles?view=net-5.0)
 1. [コンボボックスに項目を追加する - コンボボックスのドロップダウンリストに追加する - C#プログラミング](https://www.ipentec.com/document/csharp-combobox-add-item)
+1. [【C#】string.Format() をやめて $"{}"（文字列補間式）を使う](https://qiita.com/Nossa/items/c2226232b31d7665267f)
+1. [Random.Next メソッド](https://docs.microsoft.com/ja-jp/dotnet/api/system.random.next?view=net-5.0)
+1. [PictureBox クラス](https://docs.microsoft.com/ja-jp/dotnet/api/system.windows.forms.picturebox?view=net-5.0)
+1. [PictureBoxコントロールに簡単に画像を表示する](https://dobon.net/vb/dotnet/graphics/pictureboximage.html)
