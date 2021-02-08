@@ -37,3 +37,4 @@ C:\Users\mkato\Documents\github\Lottery\Lottery\Lottery\obj\Debug\Lottery.csproj
 C:\Users\mkato\Documents\github\Lottery\Lottery\Lottery\obj\Debug\Lottery.csproj.CoreCompileInputs.cache
 C:\Users\mkato\Documents\github\Lottery\Lottery\Lottery\obj\Debug\Lottery.exe
 C:\Users\mkato\Documents\github\Lottery\Lottery\Lottery\obj\Debug\Lottery.pdb
+C:\Users\mkato\Documents\github\Lottery\Lottery\Lottery\obj\Debug\Lottery.csprojAssemblyReference.cache
