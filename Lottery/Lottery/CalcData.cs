@@ -20,7 +20,10 @@ namespace Lottery
 				m_studentList = m_classData.getStudentList();
                 falseList = new List<Student>();
             }
-			m_random = new System.Random();
+			DateTime day0 = new DateTime(1980, 1, 1).Date;
+			DateTime today = DateTime.Now.Date;
+			TimeSpan diff = today - day0;
+			m_random = new System.Random(diff.Days);
 		}
 
 		/* 生徒名のリスト取得 (ルーレット表示用) */
