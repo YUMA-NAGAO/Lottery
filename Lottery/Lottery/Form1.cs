@@ -117,10 +117,10 @@ namespace Lottery
             GatyaButton.Visible = true;
             selectedFileItem = comboBox2.SelectedItem.ToString();
             selectedFileIndex = comboBox2.SelectedIndex;
-            calc_data = new ExCalcData(ref eCheck, "../ClassDataCSV/" + selectedFileItem);
+            calc_data = new ExCalcData(ref eCheck, selectedFileItem);
             if(eCheck != 0)
             {
-                this.Close();
+                GatyaButton.Visible = false;
             }
         }
     }

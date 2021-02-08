@@ -12,33 +12,58 @@ namespace Lottery
         //コンストラクタ
         public ClassData(string filename, ref int eCheck)
         {
-            try
-            {
-                ReadData(filename);
-            }
-            catch(Exception)
-            {
-                eCheck = -1;
-                ErrorHandling.ErrorPopup("Not found " + filename);
-            }
-        }
-
-        private void ReadData(string filename)
-        {
             StreamReader file = null;
             try
             {
-                file = new StreamReader(filename);
+                file = new StreamReader(AddCombo.dir + '/' + filename);
                 StudentList = new List<Student>();
 
-                char[] separator = new char[] { ',', ' ', '　' };
+                char[] separator = new char[] {',','、','.'};
                 while (!file.EndOfStream)
                 {
                     string line = file.ReadLine();
+                    line = line.Replace(" ", String.Empty);
+                    line = line.Replace("　", String.Empty);
                     string[] data = line.Split(separator, StringSplitOptions.RemoveEmptyEntries);
-                    Student tmp = new Student(data[0], data[1], DateTime.ParseExact(data[2], "MM/dd", null));
-                    StudentList.Add(tmp);
+                    Student tmp = null;
+                    if (data.Length == 3)
+                    {
+                        char[] sepSlash = new char[] { '/' };
+                        string[] birth = data[2].Split(sepSlash, StringSplitOptions.RemoveEmptyEntries);
+                        birth[0] = String.Format("{0:D2}", Int32.Parse(birth[0]));
+                        birth[1] = String.Format("{0:D2}", Int32.Parse(birth[1]));
+                        tmp = new Student(data[0], data[1], DateTime.ParseExact(birth[0] + '/' + birth[1], "MM/dd", null));
+                    }
+                    else
+                    {
+                        tmp = new Student(data[0], data[1], DateTime.ParseExact("01/01", "MM/dd", null));
+                    }
+
+                    if (tmp != null)
+                    {
+                        StudentList.Add(tmp);
+                    }
                 }
+            }
+            catch(FileNotFoundException)
+            {
+                eCheck = -1;
+                ErrorHandling.ErrorPopup("Not found " + filename + "\nChange to another file");
+            }
+            catch (IOException)
+            {
+                eCheck = -1;
+                ErrorHandling.ErrorPopup("File may be locked\nChange to another file");
+            }
+            catch (UnauthorizedAccessException)
+            {
+                eCheck = -1;
+                ErrorHandling.ErrorPopup("No permission to access this file\nChange to another file");
+            }
+            catch (Exception)
+            {
+                eCheck = -1;
+                ErrorHandling.ErrorPopup("Error in this file's data format\nChange to another file");
             }
             finally
             {
@@ -49,7 +74,8 @@ namespace Lottery
             }
         }
 
-        //指定位置の生徒のデータを返す
+
+        //生徒のリストを返す
         public List<Student> getStudentList()
         {
             return StudentList;

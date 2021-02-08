@@ -4,11 +4,11 @@ using System.Linq;
 
 namespace Lottery
 {
-    static class AddCombo
+    public static class AddCombo
     {
+        public static string dir = "../ClassDataCSV";
         public static string[] DirectroyData(ref int eCheck)
         {
-            string dir = "../ClassDataCSV";
             string[] data = { };
 
             try
